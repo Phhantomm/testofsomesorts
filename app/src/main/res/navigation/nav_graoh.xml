@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graoh"
+    app:startDestination="@id/mainFrag">
+
+    <fragment
+        android:id="@+id/mainFrag"
+        android:name="com.example.testofsomesorts.fragments.MainFrag"
+        android:label="MainFrag"
+        tools:layout="@layout/main_layout">
+        <action
+            android:id="@+id/action_mainFrag_to_sidehoe"
+            app:destination="@id/sidehoe" />
+    </fragment>
+    <fragment
+        android:id="@+id/sidehoe"
+        android:name="com.example.testofsomesorts.fragments.Sidehoe"
+        android:label="Sidehoe"
+        tools:layout="@layout/sidehoe_layout">
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="Yes"/>
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.testofsomesorts.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>
